@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpingGreens | Donor Registration</title>
+    <link href="./css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <main class="bg-gray-100 min-h-screen py-12">
+    <div class="container mx-auto px-6 md:px-20">
+        <!-- Intro -->
+        <div class="text-center md:text-left py-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+            Create Your Account & Subscribe
+        </h1>
+        <p class="text-base md:text-lg text-gray-600 max-w-2xl">
+            Join us in supporting local nonprofits, one microgreen subscription at a time.
+        </p>
+        </div>
+
+        <!-- Form and Summary -->
+        <div class="flex flex-col lg:flex-row gap-10">
+        <!-- FORM -->
+        <form action="" class="bg-white p-8 rounded-2xl shadow-lg flex-1 space-y-10">
+            <!-- YOUR DETAILS -->
+            <section>
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 border-b border-gray-200 pb-2">Your Details</h3>
+            <div class="space-y-6 w-full">
+                <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <label for="name" class="block font-medium mb-2">Full Name</label>
+                    <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none"
+                    />
+                </div>
+                <div>
+                    <label for="address" class="block font-medium mb-2">Email Address</label>
+                    <input
+                    type="email"
+                    id="address"
+                    placeholder="you@example.com"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none"
+                    />
+                </div>
+                </div>
+
+                <div>
+                <label for="number" class="block font-medium mb-2">Phone Number</label>
+                <input
+                    type="text"
+                    id="number"
+                    placeholder="(123) 456-7890"
+                    class="w-1/2 border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none"
+                />
+                </div>
+            </div>
+            </section>
+
+            <!-- DELIVERY INFO -->
+            <section>
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 border-b border-gray-200 pb-2">Delivery Information</h3>
+           <div class="space-y-4">
+                <div>
+                    <label for="d-address" class="block font-medium mb-2">Delivery Address</label>
+                    
+                    <!-- Wrap input and icon in a relative container -->
+                    <div class="relative">
+                    <img
+                        src="./assets/icons/location.png"
+                        alt="location icon"
+                        class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-70 pointer-events-none"
+                    />
+                    <input
+                        type="text"
+                        id="d-address"
+                        placeholder="Enter your address to check eligibility"
+                        class="w-full border border-gray-300 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none"
+                    />
+                    </div>
+                </div>
+
+               <div id="alert" style="display: none;"></div>
+
+                </div>
+
+            </section>
+
+            <!-- SUBSCRIPTION -->
+            <section>
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 border-b border-gray-200 pb-2">Customize Your Subscription</h3>
+
+            <!-- Nonprofit Search -->
+            <div class="mb-6">
+                <label for="orgname" class="block font-medium mb-3">Choose Nonprofit</label>
+                <div class="relative">
+                <img
+                    src="./assets/icons/navsearch.png"
+                    alt="search icon"
+                    class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 opacity-70"
+                />
+                <input
+                    type="text"
+                    id="orgname"
+                    placeholder="Search by name or unique code"
+                    class="w-full border border-gray-300 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none"
+                />
+                </div>
+            </div>
+
+            <!-- Plans -->
+            <p class="font-medium mb-4">Product Choice</p>
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+                <div
+                id="plan1"
+                class="p-5 border border-gray-200 rounded-xl hover:border-green-600 hover:bg-green-50 transition cursor-pointer"
+                >
+                <h5 class="text-lg font-semibold text-gray-800">Fresh Microgreens</h5>
+                <p class="text-gray-600 text-sm mb-2">Weekly delivery of nutrient-packed greens.</p>
+                <h4 class="text-gray-800 font-bold">$30.00</h4>
+                </div>
+
+                <div
+                id="plan2"
+                class="p-5 border border-gray-200 rounded-xl hover:border-green-600 hover:bg-green-50 transition cursor-pointer"
+                >
+                <h5 class="text-lg font-semibold text-gray-800">Freeze-Dried Powder</h5>
+                <p class="text-gray-600 text-sm mb-2">Convenient capsules for on-the-go nutrition.</p>
+                <h4 class="text-gray-800 font-bold">$25.00</h4>
+                </div>
+            </div>
+
+            <!-- Frequency -->
+            <div>
+                <label class="font-semibold mb-2 block">Frequency</label>
+                <select
+                class="w-64 border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none"
+                >
+                <option value="monthly">Monthly</option>
+                <option value="biweekly">Bi-Weekly</option>
+                <option value="weekly">Weekly</option>
+                </select>
+            </div>
+            </section>
+
+            <!-- PAYMENT -->
+            <section>
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 border-b border-gray-200 pb-2">Payment Details</h3>
+            <div class="space-y-4">
+                <p
+                class="w-full bg-gray-100 border border-gray-300 rounded-lg px-4 py-3 text-center text-gray-500 font-medium"
+                >
+                Stripe Payment Element Placeholder
+                </p>
+
+                <div class="flex mb-4 items-center gap-2">
+                <input type="checkbox" id="moredonate" class="accent-green-600">
+                <label for="moredonate" class="text-sm text-gray-700">Yes, I'd like to cover the processing fee to give more to nonprofits.</label>
+                </div>
+
+                <a href="donor-portal.html">
+                <button
+                type="button"
+                class="bg-green-600 text-white w-full py-3 font-semibold rounded-lg hover:bg-green-700 transition"
+                >
+                Subscribe & Support
+                </button>
+                </a>
+            </div>
+            </section>
+        </form>
+
+        <!-- ASIDE SUMMARY -->
+        <aside class="bg-white p-6 rounded-2xl shadow-lg w-full lg:w-1/3 h-fit">
+            <h2 class="text-xl font-bold mb-6 text-gray-800 border-b border-gray-200 pb-2">Your Subscription</h2>
+            <div class="space-y-4 text-gray-700">
+            <div class="flex justify-between">
+                <p>{Plan}</p><p>{value based on subscription}</p>
+            </div>
+            <div class="flex justify-between">
+                <p>Frequency</p><p>{selected frequency}</p>
+            </div>
+            <div class="flex justify-between">
+                <p>Donation Portion</p><p>{Amount}</p>
+            </div>
+            <div class="flex justify-between">
+                <p>Processing Fee</p><p>{fee amount}</p>
+            </div>
+            </div>
+
+            <div class="mt-6 border-t border-gray-200 pt-4">
+            <div class="flex justify-between text-lg font-semibold mb-2">
+                <h3>Total Due Today</h3><h3>{total amount}</h3>
+            </div>
+            <p class="text-sm text-gray-600">You will be charged monthly until you cancel.</p>
+            </div>
+        </aside>
+        </div>
+    </div>
+    </main>
+
+
+    <div id="footerTwo"></div>
+    <script src="./js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        const tabPanes = document.querySelectorAll(".tab-pane");
+
+        tabButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+            const target = btn.dataset.tab;
+
+            // Remove active state from all buttons
+            tabButtons.forEach((b) => b.classList.remove("active-tab"));
+
+            // Hide all panes
+            tabPanes.forEach((pane) => pane.classList.add("hidden"));
+
+            // Activate clicked tab
+            btn.classList.add("active-tab");
+            document.getElementById(target).classList.remove("hidden");
+            });
+        });
+        });
+
+    </script>
+</body>
+</html>

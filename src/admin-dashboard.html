@@ -1,0 +1,173 @@
+<!-- Admin dashboard -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HelpingGreens | Admin Dashboard</title>
+  <link rel="stylesheet" href="./css/input.css" />
+  <link href="./css/style.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-900">   
+    <!-- Navbar (loaded dynamically) -->
+        <div id="adminNav"></div>
+    
+    <main class="min-h-[80vh] py-10">
+        <div class="container px-6 md:px-20">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
+            Admin Dashboard
+        </h1>
+    
+        <!-- Dashboard Content -->
+        <div class="grid lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <!-- Example Card -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Total Revenue</h2>
+            <p class="text-3xl font-bold mb-2">$12,450.78</p>
+            <p class="text-sm text-green-400">+5.2% this month</p>
+            </div>
+    
+           <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Active Nonprofit</h2>
+            <p class="text-3xl font-bold mb-2">32</p>
+            <p class="text-sm text-green-400">+2 this month</p>
+            </div>
+    
+            <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Subscribers</h2>
+            <p class="text-3xl font-bold mb-2">512</p>
+            <p class="text-sm text-green-400">+15 this month</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Fulfillment Success</h2>
+            <p class="text-3xl font-bold mb-2">98.7%</p>
+            <p class="text-sm text-amber-500">-0.3% this month</p>
+            </div>
+        </div>
+        <!-- Recent Fulfillments & Stats -->
+        <div class="grid lg:grid-cols-[3fr_2fr] gap-8 mt-10 max-w-7xl mx-auto">
+
+        <!-- LEFT: Recent Fulfillments Table -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm">
+            <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-bold text-gray-900">Recent Fulfillments</h2>
+            <a href="#" class="text-sm text-green-600 font-medium hover:underline">View All</a>
+            </div>
+
+            <div class="overflow-x-auto">
+            <table class="w-full text-left text-gray-700 border-separate border-spacing-y-2">
+                <thead>
+                <tr class="text-sm text-green-900 text-opacity-70">
+                    <th class="py-2 px-4 font-semibold">Job ID</th>
+                    <th class="py-2 px-4 font-semibold">Date</th>
+                    <th class="py-2 px-4 font-semibold">Nonprofit</th>
+                    <th class="py-2 px-4 font-semibold">Status</th>
+                </tr>
+                </thead>
+                <tbody class="text-sm">
+                <tr class="bg-gray-50 hover:bg-gray-100 transition rounded-lg">
+                    <td class="py-3 px-4 text-green-600 font-medium">#J-1024</td>
+                    <td class="py-3 px-4">2023-10-26</td>
+                    <td class="py-3 px-4">Green Acres Charity</td>
+                    <td class="py-3 px-4 flex items-center space-x-2">
+                    <img src="./assets/icons/check.png" class="w-4 h-4" alt="success">
+                    <img src="./assets/icons/check.png" class="w-4 h-4" alt="success">
+                    </td>
+                </tr>
+
+                <tr class="bg-gray-50 hover:bg-gray-100 transition rounded-lg">
+                    <td class="py-3 px-4 text-green-600 font-medium">#J-1023</td>
+                    <td class="py-3 px-4">2023-10-26</td>
+                    <td class="py-3 px-4">City Sprouts</td>
+                    <td class="py-3 px-4 flex items-center space-x-2">
+                    <img src="./assets/icons/check.png" class="w-4 h-4" alt="success">
+                    <img src="./assets/icons/warning.png" class="w-4 h-4" alt="pending">
+                    </td>
+                </tr>
+
+                <tr class="bg-gray-50 hover:bg-gray-100 transition rounded-lg">
+                    <td class="py-3 px-4 text-green-600 font-medium">#J-1022</td>
+                    <td class="py-3 px-4">2023-10-25</td>
+                    <td class="py-3 px-4">Urban Gardeners</td>
+                    <td class="py-3 px-4 flex items-center space-x-2">
+                    <img src="./assets/icons/failed.png" class="w-4 h-4" alt="failed">
+                    <img src="./assets/icons/check.png" class="w-4 h-4" alt="success">
+                    </td>
+                </tr>
+
+                <tr class="bg-gray-50 hover:bg-gray-100 transition rounded-lg">
+                    <td class="py-3 px-4 text-green-600 font-medium">#J-1021</td>
+                    <td class="py-3 px-4">2023-10-24</td>
+                    <td class="py-3 px-4">Root Foundation</td>
+                    <td class="py-3 px-4 flex items-center space-x-2">
+                    <img src="./assets/icons/check.png" class="w-4 h-4" alt="success">
+                    <img src="./assets/icons/check.png" class="w-4 h-4" alt="success">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <!-- RIGHT: Stats Panel -->
+        <aside class="space-y-6">
+
+            <!-- Quick Actions -->
+            <section class="bg-white p-6 rounded-2xl shadow-sm">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Quick Actions</h2>
+            <div class="space-y-3">
+                <button class="bg-green-600 w-full text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition">
+                Adjust Platform Fee %
+                </button>
+                <button class="bg-green-600 w-full text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition">
+                Run Payouts Now
+                </button>
+                <button class="border border-yellow-400 text-yellow-600 w-full py-3 rounded-lg font-semibold hover:bg-yellow-50 transition">
+                View Logs
+                </button>
+            </div>
+            </section>
+
+            <!-- Integration Health -->
+            <section class="bg-white p-6 rounded-2xl shadow-sm">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Integration Health</h2>
+            <ul class="space-y-3 text-sm text-gray-700">
+                <li class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <img src="./assets/icons/check.png" class="w-4 h-4" alt="ok">
+                    <span>Stripe Connect</span>
+                </div>
+                <span class="text-gray-500">2 min ago</span>
+                </li>
+
+                <li class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <img src="./assets/icons/check.png" class="w-4 h-4" alt="ok">
+                    <span>Amazon SP-API</span>
+                </div>
+                <span class="text-gray-500">5 min ago</span>
+                </li>
+
+                <li class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <img src="./assets/icons/warning.png" class="w-4 h-4" alt="warn">
+                    <span>Whole Foods API</span>
+                </div>
+                <span class="text-gray-500">1 hour ago</span>
+                </li>
+            </ul>
+            </section>
+        </aside>
+        </div>
+
+
+        </div>
+    </main>
+    
+    <!-- Footer (loaded dynamically) -->
+    <div id="footerThree"></div>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>

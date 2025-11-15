@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nonprofit Dashboard</title>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100">
+
+  <div class="flex min-h-screen flex-col md:flex-row">
+    
+    <!-- Sidebar -->
+    <aside id="sidebar" class="fixed md:static top-0 left-0 h-screen w-64 bg-white shadow-md transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-50">
+     
+
+      <!-- Sidebar Content -->
+      <div class="flex flex-col h-screen bg-white shadow-md  overflow-y-auto">
+        <!-- Header -->
+        <div class="p-6 border-b flex items-center gap-4">
+          <img src="./assets/icons/logo.png" class="w-6" alt="logo" />
+          <div class="text-[#101814] font-bold text-lg">A Helping of Greens</div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex-1 p-4 space-y-2">
+          <a href="nonprofit-dashboard.html" class="sidebar-link flex items-center gap-4 px-4 py-2 rounded bg-green-100">
+            <img src="../assets/icons/dashboard.png" class="w-5" alt="Dashboard" />
+            <span>Dashboard</span>
+          </a>
+
+          <a href="#" class="sidebar-link flex items-center gap-4 px-4 py-2 rounded hover:bg-green-100">
+            <img src="../assets/icons/campaigns.png" class="w-5" alt="Campaigns" />
+            <span>Campaigns</span>
+          </a>
+
+          <a href="#" class="sidebar-link flex items-center gap-4 px-4 py-2 rounded hover:bg-green-100">
+            <img src="../assets/icons/donor.png" class="w-5" alt="Donors" />
+            <span>Donors</span>
+          </a>
+
+          <a href="#" class="sidebar-link flex items-center gap-4 px-4 py-2 rounded hover:bg-green-100">
+            <img src="../assets/icons/analytics.png" class="w-5" alt="Analytics" />
+            <span>Analytics</span>
+          </a>
+
+          <a href="#" class="sidebar-link flex items-center gap-4 px-4 py-2 rounded hover:bg-green-100">
+            <img src="../assets/icons/marketlib.png" class="w-5" alt="Marketing Library" />
+            <span>Marketing Library</span>
+          </a>
+
+          <a href="#" class="sidebar-link flex items-center gap-4 px-4 py-2 rounded hover:bg-green-100">
+            <img src="../assets/icons/payouts.png" class="w-5" alt="Payout" />
+            <span>Payout</span>
+          </a>
+        </nav>
+
+        <!-- Footer -->
+        <div class="p-4 border-t space-y-2">
+          <a href="#" class="sidebar-link flex items-center gap-4 px-4 py-2 rounded hover:bg-green-100">
+            <img src="../assets/icons/settings.png" class="w-5" alt="Settings" />
+            <span>Settings</span>
+          </a>
+          <a href="../index.html" class="flex items-center gap-4 px-4 py-2 rounded hover:bg-green-100">
+            <img src="../assets/icons/logout.png" class="w-5" alt="Logout" />
+            <span>Logout</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto bg-gray-50">
+      <!-- Header -->
+      <header class="flex items-center justify-between px-4 sm:px-6 py-4 bg-white shadow-sm sticky top-0 z-50">
+        <!-- Left Section -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <!-- Toggle Button -->
+          <button id="openSidebar" class="md:hidden text-gray-700 text-2xl focus:outline-none">☰</button>
+          <h1 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 whitespace-nowrap">
+            Green Sprout Org Portal
+          </h1>
+        </div>
+
+        <!-- Right Section -->
+        <div class="flex items-center gap-3 sm:gap-6">
+          <div class="relative hidden sm:block w-40 md:w-64">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full border border-gray-200 bg-gray-100 rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-green-600 focus:outline-none text-sm md:text-base"
+            />
+            <img
+              src="./assets/icons/navsearch.png"
+              alt="search icon"
+              class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 opacity-70"
+            />
+          </div>
+
+          <div class="flex items-center gap-2 sm:gap-3 bg-white px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg shadow-sm hover:shadow-md transition">
+            <img
+              src="./assets/icons/userimg.png"
+              alt="user avatar"
+              class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
+            />
+            <div class="hidden sm:block text-xs sm:text-sm leading-tight">
+              <p class="font-semibold text-gray-800">Alex Chen</p>
+              <p class="text-gray-500 text-xs">Administrator</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Heading + Actions -->
+      <section class="flex flex-wrap items-center justify-between gap-3 px-4 sm:px-6 mt-6 max-w-7xl mx-auto">
+        <p class="text-base sm:text-lg font-semibold text-gray-800">Dashboard Overview</p>
+
+        <div class="flex flex-wrap gap-3">
+          <button class="flex items-center gap-2 px-4 py-2 border border-orange-400 text-orange-500 rounded-lg font-medium text-sm sm:text-base shadow-sm hover:bg-orange-50 transition">
+            <img src="./assets/icons/download.png" alt="download icon" class="w-4 h-4">
+            <span>Export</span>
+          </button>
+          <a href="./campaign.html">
+          <button type="button" class="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg font-medium text-sm sm:text-base shadow-sm hover:bg-green-700 transition">
+            <img src="./assets/icons/addcampaign.png" alt="add icon" class="w-4 h-4">
+            <span>New Campaign</span>
+          </button>
+          </a>
+        </div>
+      </section>
+
+      <!-- Dashboard Metrics -->
+      <div id="dashboard-content" class="p-4 sm:p-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div class="bg-white p-6 rounded-lg shadow-md text-center sm:text-left">
+            <h2 class="text-sm text-green-800 text-opacity-65 font-semibold mb-1">Total Donations (MRR)</h2>
+            <p class="text-3xl font-bold mb-1">$1,250</p>
+            <p class="text-sm text-green-500 font-medium">+12.5%</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md text-center sm:text-left">
+            <h2 class="text-sm text-green-800 text-opacity-65 font-semibold mb-1">Active Subscribers</h2>
+            <p class="text-3xl font-bold mb-1">84</p>
+            <p class="text-sm text-green-500 font-medium">+5 this month</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md text-center sm:text-left">
+            <h2 class="text-sm text-green-800 text-opacity-65 font-semibold mb-1">Campaign Conversion</h2>
+            <p class="text-3xl font-bold mb-1">4.2%</p>
+            <p class="text-sm text-green-500 font-medium">+0.3%</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md text-center sm:text-left">
+            <h2 class="text-sm text-green-800 text-opacity-65 font-semibold mb-1">Next Payout Date</h2>
+            <p class="text-3xl font-bold mb-1">Oct 15, 2023</p>
+            <p class="text-sm text-green-500 font-medium">in 5 days</p>
+          </div>
+        </div>
+
+        <!-- Campaigns & Donors -->
+        <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-6 max-w-7xl mx-auto mt-10">
+          <!-- Top Campaigns -->
+          <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Top Campaigns by Revenue</h2>
+
+            <div class="space-y-5">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <p class="font-medium text-green-800 text-opacity-65 min-w-[120px]">Fall Harvest</p>
+                <div class="flex-1 mx-3">
+                  <div class="w-full bg-green-100 rounded-full h-2.5">
+                    <div class="bg-green-600 h-2.5 rounded-full w-[85%]"></div>
+                  </div>
+                </div>
+                <p class="text-gray-900 font-semibold text-sm">$875</p>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <p class="font-medium text-green-800 text-opacity-65 min-w-[120px]">Summer Growth</p>
+                <div class="flex-1 mx-3">
+                  <div class="w-full bg-green-100 rounded-full h-2.5">
+                    <div class="bg-green-600 h-2.5 rounded-full w-[75%]"></div>
+                  </div>
+                </div>
+                <p class="text-gray-900 font-semibold text-sm">$750</p>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <p class="font-medium text-green-800 text-opacity-65 min-w-[120px]">Spring Seeding</p>
+                <div class="flex-1 mx-3">
+                  <div class="w-full bg-green-100 rounded-full h-2.5">
+                    <div class="bg-green-600 h-2.5 rounded-full w-[62%]"></div>
+                  </div>
+                </div>
+                <p class="text-gray-900 font-semibold text-sm">$625</p>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <p class="font-medium text-green-800 text-opacity-65 min-w-[120px]">Winter Warmth</p>
+                <div class="flex-1 mx-3">
+                  <div class="w-full bg-green-100 rounded-full h-2.5">
+                    <div class="bg-green-600 h-2.5 rounded-full w-[25%]"></div>
+                  </div>
+                </div>
+                <p class="text-gray-900 font-semibold text-sm">$250</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent Donors -->
+          <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Recent Donors</h2>
+
+            <div class="space-y-4">
+              <div class="flex flex-wrap items-center justify-between border-b border-gray-100 pb-3 gap-3">
+                <div class="flex items-center gap-3">
+                  <img src="./assets/icons/userimg.png" class="w-10 h-10 rounded-full object-cover" alt="Donor">
+                  <div>
+                    <p class="font-medium text-gray-800">j***n@example.com</p>
+                    <p class="text-sm text-green-800 text-opacity-65">2 days ago</p>
+                  </div>
+                </div>
+                <p class="text-gray-900 font-semibold">$25.00</p>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between border-b border-gray-100 pb-3 gap-3">
+                <div class="flex items-center gap-3">
+                  <img src="./assets/icons/userimg.png" class="w-10 h-10 rounded-full object-cover" alt="Donor">
+                  <div>
+                    <p class="font-medium text-gray-800">s***a@example.com</p>
+                    <p class="text-sm text-green-800 text-opacity-65">3 days ago</p>
+                  </div>
+                </div>
+                <p class="text-gray-900 font-semibold">$15.00</p>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                  <img src="./assets/icons/userimg.png" class="w-10 h-10 rounded-full object-cover" alt="Donor">
+                  <div>
+                    <p class="font-medium text-gray-800">m***l@example.com</p>
+                    <p class="text-sm text-green-800 text-opacity-65">5 days ago</p>
+                  </div>
+                </div>
+                <p class="text-gray-900 font-semibold">$50.00</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Donor Location -->
+        <div class="w-full bg-white mt-10 p-6 rounded-xl shadow-md max-w-7xl mx-auto">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Donor Locations</h2>
+          <img src="./assets/icons/map.png" alt="Donor map" class="w-full rounded-lg object-cover">
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <!-- Sidebar Toggle JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sidebar = document.getElementById("sidebar");
+      const openBtn = document.getElementById("openSidebar");
+      const closeBtn = document.getElementById("closeSidebar");
+
+      const openSidebar = () => {
+      sidebar.classList.remove("-translate-x-full");
+      sidebar.classList.add("translate-x-0");
+
+      // Only add overlay if it doesn't exist
+      if (!document.getElementById("overlay")) {
+        const overlay = document.createElement("div");
+        overlay.id = "overlay";
+        overlay.className = "fixed inset-0 bg-black bg-opacity-40 z-40 md:hidden";
+        document.body.appendChild(overlay);
+        overlay.addEventListener("click", closeSidebar);
+      }
+
+      document.body.style.overflow = "hidden";
+    };
+
+
+      const closeSidebar = () => {
+        sidebar.classList.add("-translate-x-full");
+        sidebar.classList.remove("translate-x-0");
+        document.getElementById("overlay")?.remove();
+        document.body.style.overflow = "";
+      };
+
+      openBtn?.addEventListener("click", openSidebar);
+      closeBtn?.addEventListener("click", closeSidebar);
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) closeSidebar();
+      });
+    });
+  </script>
+</body>
+</html>
